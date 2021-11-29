@@ -37,7 +37,7 @@ class ResourceParser(Parser):
         self.copy(path, source, dest)
 
 class MarkdownParser(Parser):
-    extension = [".md", ".markdown"]
+    extensions = [".md", ".markdown"]
 
     def parse(self, path, source, dest):
         content = Content.load(self.read(path))
@@ -46,7 +46,7 @@ class MarkdownParser(Parser):
         sys.stdout.write("\x1b[1;32m{} converted to HTML. Metadata: {}\n".format(path.name, content))
 
 class ReStructuredTextParser(Parser):
-    extention = [".rst"]
+    extentions = [".rst"]
 
     def parse(self, path, source, dest):
         content = Content.load(self.read(path))
