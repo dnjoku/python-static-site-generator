@@ -1,7 +1,7 @@
 import shutil
 
 from typing import List
-from pathlib impoort path
+from pathlib import Path
 
 
 class Parser:
